@@ -5,9 +5,9 @@
 solmoistureClass * sensorSolMoisture;
 relaymanagement relay_managment;
 
-int		relayPump;
-boolean relayPump_statu;
-boolean sensorSolMoisture_cap;
+int		relayPump 				= -1;
+boolean relayPump_statu 		= false;
+boolean sensorSolMoisture_cap 	= false;
 
 void setup()
 {
@@ -17,13 +17,11 @@ void setup()
 
 void loop()
 {
-	sensorSolMoisture_cap = false;
+	relayPump_statu 		= relay_managment.relay(relayPump)->getStatus();	
 	sensorSolMoisture->loop(sensorSolMoisture_cap);
 	if (sensorSolMoisture_cap) {
-		relayPump_statu = relay_managment.relay(relayPump)->getStatus();
-		if (!relayPump_statu) relay_managment.relay(relayPump)->open();
+		if (!relayPump_statu) 	relay_managment.relay(relayPump)->open();
 	} else {
-		relayPump_statu = relay_managment.relay(relayPump)->getStatus();
-		if (relayPump_statu) relay_managment.relay(relayPump)->close();
+		if (relayPump_statu) 	relay_managment.relay(relayPump)->close();
 	}
 }
