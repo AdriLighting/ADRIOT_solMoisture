@@ -1,6 +1,6 @@
 
-#include <ADRIOT_solmoisture.h>
-#include <ADRIOT_relay.h>
+#include <adriiot_solmoisture.h>
+#include <adriiot_relay.h>
 
 solmoistureClass * sensorSolMoisture;
 
