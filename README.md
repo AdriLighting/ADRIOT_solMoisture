@@ -3,7 +3,7 @@
 <pre>
 Librairies
 <details>
-adriiot_solMoisture             = https://github.com/AdriLighting/ADRIOT_solMoisture
+ADRIIOT_solMoisture             = https://github.com/AdriLighting/ADRIIOT_solMoisture
 ArduinoJson                     = https://github.com/bblanchon/ArduinoJson
 </details>
 Dependency Graph
