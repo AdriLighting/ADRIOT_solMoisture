@@ -1,14 +1,13 @@
 
-#include <adriiot_solmoisture.h>
-#include <adriiot_relay.h>
+#include <ADRIIOT_soilmoisture.h>
 
-solmoistureClass * sensorSolMoisture;
+soilmoistureClass * sensorSolMoisture;
 
 boolean sensorSolMoisture_cap 	= false;
 
 void setup()
 {
-	sensorSolMoisture = new solmoistureClass(false,D1);
+	sensorSolMoisture = new soilmoistureClass(false,D1);
 }
 
 void loop()
